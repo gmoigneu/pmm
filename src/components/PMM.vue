@@ -3,23 +3,23 @@
      <h2 class="text-2xl mb-6 font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">
       Precision Method
     </h2>
-    <div class="container mx-auto">
-      <div class="grid grid-cols-3 gap-4">
+    <div class="container mx-auto mb-4">
+      <div class="grid grid-cols-3 gap-1">
       <div class="px-4">
         <p>ISO</p>
-        <select class="p-4" v-model="iso" @change="showSettings()">
+        <select class="p-4 w-full bg-gray-100" v-model="iso" @change="showSettings()">
           <option v-for="(isoValue, index) in isos" :key="index" :value="isoValue">{{ isoValue}}</option>
         </select>
       </div>
       <div class="px-4">
         <p>EV</p>
-        <select class="p-4" v-model="ev" @change="showSettings()">
+        <select class="p-4 w-full bg-gray-100" v-model="ev" @change="showSettings()">
         <option v-for="evValue in 29" :key="evValue" :value="evValue - 7">{{ evValue - 7}}</option>
       </select>
       </div>
       <div class="px-4">
         <p>Shift</p>
-        <select class="p-4" v-model="shift" @change="showSettings()">
+        <select class="p-4 w-full bg-gray-100" v-model="shift" @change="showSettings()">
         <option v-for="shiftValue in 9" :key="shiftValue" :value="shiftValue - 5">{{ shiftValue - 5}}</option>
       </select>
       </div>
